@@ -1,5 +1,5 @@
 #include "stdio.h"
-
+void suma();
 int main(){
     int opc;
     do {
@@ -11,5 +11,17 @@ int main(){
         printf("0) Salir\n");
         printf("Seleccione una opción: ");
         scanf("%d", &opc);
+        if (opc == 1){
+            suma();
+        }
     }while(opc != 0);
+}
+
+void suma(){
+    float a, b;
+    printf("Ingresa el primer número: ");
+    scanf("%f", &a);
+    printf("Ingresa el segundo número: ");
+    scanf("%f", &b);
+    printf("Resultado: %.2f\n", a + b);
 }
