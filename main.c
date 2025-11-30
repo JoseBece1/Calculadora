@@ -30,7 +30,7 @@ int main(){
         }
         if (opc == 4){
             dividir();
-        }
+        } 
         if (opc == 5){
             potencia();
         }
