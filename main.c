@@ -1,9 +1,11 @@
 #include "stdio.h"
+#include "math.h"
 
 void suma();
 void resta();
 void multiplicar();
 void dividir();
+void potencia();
 
 int main(){
     int opc;
@@ -13,6 +15,7 @@ int main(){
         printf("2) Restar\n");
         printf("3) Multiplicar\n");
         printf("4) Dividir\n");
+        printf("5) Potencia\n");
         printf("0) Salir\n");
         printf("Seleccione una opción: ");
         scanf("%d", &opc);
@@ -27,6 +30,9 @@ int main(){
         }
         if (opc == 4){
             dividir();
+        } 
+        if (opc == 5){
+            potencia();
         }
     }while(opc != 0);
 }
@@ -70,4 +76,13 @@ void dividir(){
     } else {
         printf("Error: No se puede dividir entre cero\n");
     }
+}
+
+void potencia(){
+    float base, exponente;
+    printf("Ingresa la base: ");
+    scanf("%f", &base);
+    printf("Ingresa el exponente: ");
+    scanf("%f", &exponente);
+    printf("Resultado: %.2f\n", pow(base, exponente));
 }
